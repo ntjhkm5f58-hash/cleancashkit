@@ -4,66 +4,89 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Clean Cash Kit — 5-Minute Budget Starter Pack</title>
-  <meta name="description" content="A minimalist budget + habit system to get control of your money in 5 minutes a day. Instant download.">
+  <meta name="description" content="Get control of your money in 5 minutes a day with a minimalist budget + habit system. Instant download. Pay what you want.">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="container">
-    <nav class="nav">
-      <div class="brand">Clean Cash Kit</div>
-      <a class="cta" href="#buy">Get the Kit</a>
+  <header class="site-header container">
+    <a class="brand" href="#">Clean Cash Kit</a>
+    <nav class="topnav">
+      <a href="#features">Features</a>
+      <a href="#inside">What’s inside</a>
+      <a class="btn small" href="https://oharami.gumroad.com/l/vqchi" target="_blank" rel="noopener">Download</a>
     </nav>
-
-    <div class="hero">
-      <h1>Gain control of your money in 5 minutes a day.</h1>
-      <p class="sub">A minimalist budget + habit system designed for busy people. Instant download. No fluff.</p>
-      <a class="primary" href="https://oharami.gumroad.com/l/vqchi" target="_blank" rel="noopener">Download the Clean Cash Kit</a>
-      <div class="checks">
-        <span>✔ Budget sheet (Excel)</span>
-        <span>✔ 1-page monthly budget (PDF)</span>
-        <span>✔ Habit tracker (PDF)</span>
-        <span>✔ Quickstart guide</span>
-      </div>
-    </div>
   </header>
 
-  <section class="container grid features">
-    <div>
-      <h2>Simple, fast, and effective</h2>
-      <p>Set up your budget in minutes. Track your top 3 categories, pay down debt with a snowball, and build an emergency fund.</p>
-    </div>
-    <div>
-      <h3>What’s inside</h3>
-      <ul>
-        <li><strong>Budget.xlsx</strong> — income, bills, variable spending, and debt snowball</li>
-        <li><strong>Budget.pdf</strong> — printable monthly budget (one page)</li>
-        <li><strong>HabitTracker.pdf</strong> — 31-day tracker to build money habits</li>
-        <li><strong>Quickstart</strong> — 5 steps to get rolling today</li>
+  <section class="hero container">
+    <div class="hero-copy">
+      <h1>Gain control of your money in <span class="highlight">5 minutes a day</span>.</h1>
+      <p class="sub">A minimalist budget + habit system designed for busy people. Instant download. No fluff. Pay what you want — including $0.</p>
+      <div class="cta-row">
+        <a class="btn primary" href="https://oharami.gumroad.com/l/vqchi" target="_blank" rel="noopener">Get the Clean Cash Kit</a>
+        <span class="tiny">Instant download • Excel + PDFs</span>
+      </div>
+      <ul class="ticks">
+        <li>Budget sheet (Excel)</li>
+        <li>1-page monthly budget (PDF)</li>
+        <li>Habit tracker (PDF)</li>
+        <li>Quickstart guide</li>
       </ul>
     </div>
+    <div class="hero-art">
+      <!-- Add a cover image named cover.jpg or cover.png to the repo root -->
+      <img src="cover.jpg" alt="Clean Cash Kit cover" onerror="this.src='cover.png'">
+    </div>
+  </section>
+
+  <section id="features" class="container grid three">
+    <div class="card">
+      <h3>Minimal setup</h3>
+      <p>Start in minutes. No complex formulas or categories you’ll never use.</p>
+    </div>
+    <div class="card">
+      <h3>Weekly check-ins</h3>
+      <p>Spend 5 minutes once a week to stay on track without stress.</p>
+    </div>
+    <div class="card">
+      <h3>Debt snowball</h3>
+      <p>List balances small → large and focus your extra on the smallest first.</p>
+    </div>
+  </section>
+
+  <section id="inside" class="container inside">
+    <h2>What’s inside</h2>
+    <ul class="inside-list">
+      <li><strong>Budget.xlsx</strong> — income, bills, variable spending, debt snowball</li>
+      <li><strong>Budget.pdf</strong> — clean, printable one-page monthly budget</li>
+      <li><strong>HabitTracker.pdf</strong> — 31-day tracker to make it stick</li>
+      <li><strong>Quickstart.txt</strong> — 5 simple steps to get rolling today</li>
+    </ul>
+    <a class="btn primary big" href="https://oharami.gumroad.com/l/vqchi" target="_blank" rel="noopener">Download / Pay-what-you-want</a>
+    <p class="tiny center">Tip: Suggested price $5 — set to $0 if you want to try it first.</p>
   </section>
 
   <section class="container testimonials">
     <h2>Why people like it</h2>
-    <div class="cards">
+    <div class="quotes">
       <blockquote>“Finally a budget I’ll actually use.”</blockquote>
       <blockquote>“Took me 10 minutes to feel in control.”</blockquote>
       <blockquote>“The habit tracker made it stick.”</blockquote>
     </div>
   </section>
 
-  <section id="buy" class="container buy">
-    <h2>Get the Clean Cash Kit</h2>
-    <p>Pay what you want — including free.</p>
-    <a class="primary" href="https://oharami.gumroad.com/l/vqchi" target="_blank" rel="noopener">Buy / Download</a>
-    <p class="tiny">Tip: You can set the price to $0 if you want to try it first.</p>
-  </section>
-
   <footer class="container foot">
-    <p>© 2025 Clean Cash Kit. All rights reserved.</p>
-    <p class="tiny">Made with ❤️ by Michael.</p>
+    <p>© 2025 Clean Cash Kit.</p>
+    <p class="tiny">Made with ❤️ by Michael • <a href="https://oharami.gumroad.com/l/vqchi" target="_blank" rel="noopener">Get the kit</a></p>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    // Smooth scroll for same-page links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click',e=>{
+        const id=a.getAttribute('href');
+        if(id.length>1){e.preventDefault();document.querySelector(id).scrollIntoView({behavior:'smooth'});}
+      });
+    });
+  </script>
 </body>
 </html>
